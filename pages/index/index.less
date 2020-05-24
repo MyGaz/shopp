@@ -1,0 +1,45 @@
+text{
+  color: var(--themeColor);
+}
+
+.index_cate{
+  display: flex;
+  navigator{
+    padding: 20rpx;
+    flex: 1;
+    image{
+      width: 100%;
+    }
+  }
+}
+
+.index_Floor{
+  .floor_group{
+    .floor_title{
+      padding: 15rpx;
+      image{
+        width: 100%;
+      }
+    }
+    .product_list{
+      overflow: hidden;
+      padding: 5rpx;
+     navigator{
+       float: left;
+       width: 33.33%;
+       &:nth-last-child(-n+4){
+         height: 33.33vw * 386 / 232 / 2;
+         border-left: 10rpx solid #fff;
+         &:nth-child(2),
+         &:nth-child(3){
+           border-bottom: 10rpx solid #fff;
+          }
+        }
+        image{
+          height:100% ;
+          width: 100%;
+       }
+     }
+    }
+  }
+}

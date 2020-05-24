@@ -1,0 +1,57 @@
+<view>
+    <view class="btn_address">
+        <button class="btn" type="primary" bindtap="addressAdd">添加地址</button>
+        <view class="myAddress" wx:if="{{IsHidden}}">
+            <view class="font">收货地址：</view>
+            <view class="address">
+                {{address.provinceName}}{{address.cityName}}{{address.countyName}}{{address.detailInfo}}
+            </view>
+        </view>
+    </view>
+    <view class="cart_content">
+        <view class="cart_title">购物车</view>
+        <block wx:if="{{carts.length!=0}}">
+         <view class="cart_main" wx:for="{{carts}}" wx:key="goods_id">
+            <view class="cart_checkbox">
+                <checkbox-group bindtap="checkStatic" data-id="{{item.goods_id}}" bindchange="">
+                    <checkbox  checked="{{item.checked}}"></checkbox>
+                </checkbox-group>
+            </view>
+            <navigator class="cart_navigator">
+                <image class="cart_image" mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'../../icons/notShow.png'}}" />
+            </navigator>
+            <view class="cart_info">
+                <view class="cart_font">{{item.goods_name}}</view>
+                <view class="cart_price_num">
+                    <view class="cart_price">
+                       ￥{{item.goods_price}}
+                    </view>
+                    <view class="cart_num">
+                        <view class="reduce" bindtap="calculation" data-id="{{item.goods_id}}" data-set="{{-1}}">-</view>
+                        <view class="num">{{item.nums}}</view>
+                        <view class="add" bindtap="calculation" data-id="{{item.goods_id}}" data-set="{{1}}">+</view>
+                    </view>
+                </view>
+                  
+            </view>
+              
+        </view>
+        </block>
+        <view class="shopping_empty" wx:else>
+            <image class="shopping_image" src="../../icons/empty_box.png" mode="widthFix" />
+        </view>
+          
+    </view>
+    <view class="cart_bottom">
+        <checkbox-group bindchange="bindChangeStatic">
+            <checkbox  checked="{{isChecked}}">全选</checkbox>
+        </checkbox-group>
+        <view class="total_price">
+            <view class="price">合计：￥ {{totalPrice}}</view>
+            <text class="text">包含运费</text>
+        </view>
+        <view class="settlement" bindtap="settlement">
+            结算({{totalNum}})
+        </view>
+    </view>
+</view>

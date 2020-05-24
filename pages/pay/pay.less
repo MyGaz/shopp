@@ -1,0 +1,154 @@
+page{
+    padding-bottom: 90rpx;
+}
+.btn_address{
+    padding: 20rpx;
+
+   .myAddress{
+
+       display: flex;
+       width: 100%;
+       height: 100rpx;
+       background-color: #fff;
+       border-top: 5rpx solid #dedede;
+       border-bottom: 5rpx solid #dedede;
+       justify-content: center;
+           align-items: center;
+       .font{
+           font-size: 34rpx;
+           font-weight: 600;
+           font-family: Arial, Helvetica, sans-serif;
+           flex:2;
+            border-right: 3rpx solid #dedede;
+       }
+       .address{
+        font-size: 34rpx;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+        flex:5;
+            display:-webkit-box;
+            overflow: hidden;
+           -webkit-box-orient: vertical;
+           -webkit-line-clamp: 2;
+           
+           
+       }
+    }    
+}
+
+.cart_content {
+   
+    .cart_title {
+        width: 100%;
+      font-size: 38rpx;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+      padding: 10rpx;
+      color: var(--themeColor);
+    }
+  
+    .cart_main {
+        display: flex;
+        width: 100%;
+        padding: 10rpx;
+    border-top: 1rpx solid #ccc;
+    border-bottom: 1rpx solid #ccc;  
+      .cart_navigator {
+          flex: 2;
+          display: flex;
+         
+          justify-content: center;
+            align-items: center;
+          .cart_image {
+              width: 80%;
+              
+        }
+      }
+  
+      .cart_info {
+          flex: 4;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .cart_font {
+              padding-top: 10rpx;
+              padding-left: 10rpx;
+              font-size: 30rpx;
+
+              display:-webkit-box;
+              overflow: hidden;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+            }
+            .cart_price_num{
+                display: flex;
+                justify-content: space-between;
+                .cart_price {
+                    color: var(--themeColor);
+                    font-size: 38rpx;
+                    
+                }
+                
+                .cart_num {
+                display: flex;
+                justify-content: space-between;
+
+                .num {
+                    width: 55rpx;
+                    height: 55rpx;
+                   
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+        
+            }   
+        }
+      }
+    }
+  }
+  .cart_bottom {
+      display: flex;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 90rpx;
+      background-color: #fff;
+    checkbox-group {
+        flex: 3;
+        display: flex;
+        align-items: center;
+        padding: 10rpx;
+    }
+  
+    .total_price {
+        flex: 2.5;
+        display: flex;
+        flex-direction: column;
+        padding: 10rpx;
+      .price {
+        color: var(--themeColor);
+        font-size: 33rpx;
+        text-align: right;
+      }
+      .text {
+         text-align: right;
+         padding-right: 15rpx;
+      }
+    }
+  
+    .payment {
+        flex: 2;
+        font-size: 38rpx;
+        color: #fff;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:var(--themeColor);
+
+    }
+  }

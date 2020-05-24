@@ -1,0 +1,22 @@
+<Tabs tabs="{{tabs}}" bindtabCheckColor="tabCheckColor">
+    <view class="feedback_total">问题的种类</view>
+    <view class="feedback_item">
+        <view>功能建议</view>
+        <view>购买遇到的问题</view>
+        <view>性能问题</view>
+        <view>其他</view>
+    </view>
+    <view class="feedback_text">
+        <textarea value="{{textVal}}" bindinput="inputText" placeholder="请描述你的问题" class="text"></textarea>
+        <view class="btn_UpImg">
+            <button bindtap="handChooseImage">+</button>
+           <view class="UpImg" wx:for="{{image}}" wx:key="*this" bindtap="clearImage" data-index="{{index}}">
+              <UpImg src="{{item}}" val="{{image}}"></UpImg> 
+           </view>   
+        </view>
+    </view>
+        <button bindtap="feedbackCommit" class="feedback_commit" type="warn">
+            <icon type="success_no_circle" size="23" color="white" />
+            <text class="font">提交</text>
+        </button>
+</Tabs>

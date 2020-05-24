@@ -1,0 +1,81 @@
+<view class="info_top">
+    <view class="info_image" wx:if="{{user.nickName}}">
+        <image class="image_big" src="{{user.avatarUrl}}" />
+        <view class="image_small">
+            <image class="image_sma" src="{{user.avatarUrl}}" />
+            <view class="userName">{{user.nickName}}</view>
+        </view>
+          
+    </view>
+    <navigator class="navigator" wx:else url="/pages/login/login">登录</navigator>
+</view>
+<view class="info_content">
+    <view class="myTracks">
+        <navigator class="CollectionShop">
+            <view class="num">0</view>
+            <view class="name">收藏的店铺</view>
+        </navigator>
+        <navigator class="Collectibles" url="/pages/collect/collect">
+             <view class="num">{{collectNum}}</view>
+            <view class="name">收藏的商品</view>
+        </navigator>
+        <navigator class="ProductsConcern">
+              <view class="num">0</view>
+            <view class="name">关注的商品</view>
+        </navigator>
+        <navigator class="Tracks">
+              <view class="num">0</view>
+            <view class="name">我的足迹</view>
+        </navigator>
+    </view>
+    <view class="myOrder">
+        <view class="orderTotal">
+            我的订单
+        </view>
+        <view class="order">
+            <navigator class="allOrders" url="/pages/order/order?type=1">
+            <text class="iconfont icon-order_icon"></text>
+             <view class="font">
+                 全部订单
+             </view>
+        </navigator>
+        <navigator class="ToBePaid" url="/pages/order/order?type=2">
+            <text class="iconfont icon-fukuan"></text>
+             <view class="font">
+                 待付款
+             </view>
+        </navigator>
+        <navigator class="toBeRreceived" url="/pages/order/order?type=3">
+            <text class="iconfont icon-fahuo"></text>
+             <view class="font">
+                 待收货
+             </view>
+        </navigator>
+        <navigator class="refund" url="/pages/order/order?type=4">
+            <text class="iconfont icon-jinbi"></text>
+             <view class="font">
+                 退款/退货
+             </view>
+        </navigator>
+        </view>
+          
+    </view>
+    <view class="receivingAddress">
+        <navigator class="navigator" >
+            收货地址管理
+        </navigator>
+    </view>
+    <view class="other">
+        <navigator class="customerService">
+            <text class="font">联系客服</text>
+            <text class="phone">400-132-4100</text>
+        </navigator>
+        <navigator url="/pages/feedback/feedback" class="Feedback">意见反馈</navigator>
+        <navigator class="aboutUs">关于我们</navigator>
+    </view>
+    <view class="share">
+       把应用推荐个其他人   
+    </view>
+      
+</view>
+  

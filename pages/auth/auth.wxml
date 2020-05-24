@@ -1,0 +1,3 @@
+<button  type="primary" plain="plain" open-type="getUserInfo" bindgetuserinfo="handGetUserInfo">
+        获取权限
+</button>

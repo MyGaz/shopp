@@ -1,0 +1,125 @@
+/* pages/user/user.wxss */
+page {
+  background-color: #f4f4f4;
+}
+.info_top {
+  height: 45vh;
+  position: relative;
+  background-color: var(--themeColor);
+}
+.info_top .info_image {
+  position: relative;
+}
+.info_top .info_image .image_big {
+  height: 48vh;
+  filter: grayscale(20%);
+}
+.info_top .info_image .image_small {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+  text-align: center;
+}
+.info_top .info_image .image_small .image_sma {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.info_top .info_image .image_small .userName {
+  font-size: 30rpx;
+  color: var(--themeColor);
+}
+.info_top .navigator {
+  width: 100rpx;
+  height: 75rpx;
+  border: solid 1px green;
+  border-radius: 10rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info_content {
+  position: relative;
+}
+.info_content .myTracks {
+  width: 90%;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20rpx;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 10rpx 0;
+}
+.info_content .myTracks navigator {
+  flex: 1;
+}
+.info_content .myOrder {
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 90rpx;
+  background-color: #fff;
+}
+.info_content .myOrder .orderTotal {
+  padding: 20rpx 10rpx 20rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #ccc;
+}
+.info_content .myOrder .order {
+  display: flex;
+  text-align: center;
+  padding: 10rpx;
+}
+.info_content .myOrder .order navigator {
+  flex: 1;
+}
+.info_content .myOrder .order navigator .iconfont {
+  color: red;
+}
+.info_content .receivingAddress {
+  width: 90%;
+  background-color: #fff;
+  padding: 20rpx 10rpx 20rpx;
+  font-size: 30rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 270rpx;
+}
+.info_content .other {
+  width: 90%;
+  background-color: #fff;
+  padding: 20rpx 10rpx 20rpx;
+  font-size: 30rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 370rpx;
+}
+.info_content .other navigator {
+  padding: 10rpx;
+  border-bottom: 1px solid #ccc;
+}
+.info_content .other .customerService {
+  display: flex;
+  justify-content: space-between;
+}
+.info_content .share {
+  width: 90%;
+  background-color: #fff;
+  padding: 20rpx 10rpx 20rpx;
+  font-size: 30rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 600rpx;
+  margin-bottom: 120rpx;
+}

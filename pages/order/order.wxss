@@ -1,0 +1,19 @@
+.order {
+  padding: 20rpx;
+  border-bottom: 1px solid #ccc;
+}
+.order .order_number {
+  display: flex;
+  justify-content: space-between;
+}
+.order .order_price {
+  display: flex;
+  justify-content: space-between;
+}
+.order .order_price .num {
+  color: var(--themeColor);
+}
+.order .order_date {
+  display: flex;
+  justify-content: space-between;
+}
